@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activiteiten — VidiReo Ravenstein</title>
+    <meta name="description" content="Activiteiten bij VidiReo: carnaval, repair café, koffie & lunch, filmhuis en meer. Er is altijd iets te beleven in Ravenstein.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Righteous&display=swap" rel="stylesheet">
+    <script defer src="https://analytics.code-lieshout.nl/script.js" data-website-id="ac17493c-726b-4335-89a7-b11991bc7275"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#4F46E5','primary-light':'#818CF8',cta:'#F97316','cta-hover':'#EA580C',bg:'#EEF2FF',dark:'#1E1B4B'},fontFamily:{display:['Righteous','sans-serif'],sans:['Poppins','sans-serif']}}}}</script>
+    <style>
+        @keyframes patternMove{0%{background-position:0 0}100%{background-position:60px 60px}}.animated-pattern{background-image:radial-gradient(circle,rgba(79,70,229,0.07) 1px,transparent 1px);background-size:30px 30px;animation:patternMove 8s linear infinite}@media(prefers-reduced-motion:reduce){.animated-pattern{animation:none}}html{scroll-behavior:smooth}
+        .card-hover{transition:transform .25s,box-shadow .25s}.card-hover:hover{transform:translateY(-4px);box-shadow:0 16px 32px rgba(79,70,229,0.12)}
+    </style>
+</head>
+<body class="font-sans text-dark bg-bg antialiased">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm"><div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex items-center justify-between h-16"><a href="index.html" class="font-display text-2xl text-primary cursor-pointer">VidiReo</a><div class="hidden md:flex items-center gap-6"><a href="index.html" class="text-dark font-medium hover:text-primary transition-colors duration-200 cursor-pointer">Home</a><a href="over-ons.html" class="text-dark font-medium hover:text-primary transition-colors duration-200 cursor-pointer">Over ons</a><a href="activiteiten.html" class="text-primary font-medium cursor-pointer">Activiteiten</a><a href="zaalhuur-catering.html" class="text-dark font-medium hover:text-primary transition-colors duration-200 cursor-pointer">Zaalhuur & Catering</a><a href="filmhuis.html" class="text-dark font-medium hover:text-primary transition-colors duration-200 cursor-pointer">Filmhuis</a><a href="galerij.html" class="text-dark font-medium hover:text-primary transition-colors duration-200 cursor-pointer">Galerij</a><a href="contact.html" class="bg-cta hover:bg-cta-hover text-white px-5 py-2.5 rounded-lg font-semibold transition-colors duration-200 cursor-pointer">Contact</a></div><button id="menu-toggle" class="md:hidden p-2 min-h-[44px] min-w-[44px] flex items-center justify-center cursor-pointer" aria-label="Menu"><svg class="w-7 h-7 text-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button></div><div id="mobile-menu" class="hidden md:hidden bg-white border-t"><div class="px-4 py-4 flex flex-col gap-3"><a href="index.html" class="py-2 text-dark font-medium cursor-pointer">Home</a><a href="over-ons.html" class="py-2 text-dark font-medium cursor-pointer">Over ons</a><a href="activiteiten.html" class="py-2 text-primary font-medium cursor-pointer">Activiteiten</a><a href="zaalhuur-catering.html" class="py-2 text-dark font-medium cursor-pointer">Zaalhuur & Catering</a><a href="filmhuis.html" class="py-2 text-dark font-medium cursor-pointer">Filmhuis</a><a href="galerij.html" class="py-2 text-dark font-medium cursor-pointer">Galerij</a><a href="contact.html" class="bg-cta text-white px-5 py-2.5 rounded-lg font-semibold text-center cursor-pointer">Contact</a></div></div></nav>
+
+    <section class="pt-28 pb-16 md:pt-36 md:pb-24 animated-pattern">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <h1 class="font-display text-4xl md:text-6xl text-dark mb-6">Activiteiten</h1>
+            <p class="text-dark/70 text-lg md:text-xl max-w-3xl">Er is altijd iets te beleven bij VidiReo. Van carnaval tot repair café, van koffie tot filmavonden.</p>
+        </div>
+    </section>
+
+    <!-- Carnaval -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="inline-block bg-cta/10 text-cta font-semibold px-4 py-1.5 rounded-full text-sm mb-4">Jaarlijks hoogtepunt</span>
+                    <h2 class="font-display text-3xl md:text-4xl text-dark mb-6">Carnaval in Pomperstad</h2>
+                    <p class="text-dark/70 text-lg mb-6">VidiReo is het epicentrum van carnaval in Ravenstein. Met een prachtig vol programma gaan we feesten als vanouds. De carnaval krijgt volop ruimte — dit geliefde feest, diep geworteld in de Ravensteinse cultuur, verdient een thuisbasis waar traditie en toekomst samenkomen.</p>
+                    <div class="space-y-3">
+                        <div class="flex items-center gap-3"><svg class="w-5 h-5 text-cta flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-dark/70">Keienschijtersbal</span></div>
+                        <div class="flex items-center gap-3"><svg class="w-5 h-5 text-cta flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-dark/70">Raovenbal 50+</span></div>
+                        <div class="flex items-center gap-3"><svg class="w-5 h-5 text-cta flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-dark/70">Jeugdpronkzitting</span></div>
+                        <div class="flex items-center gap-3"><svg class="w-5 h-5 text-cta flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg><span class="text-dark/70">Prins Onthulling (CV De Narrekap)</span></div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="images/img-1274.png" alt="Kaartverkoop Keienschijtersbal" class="rounded-2xl w-full h-48 object-cover shadow-md" loading="lazy">
+                    <img src="images/img-1317.jpeg" alt="Raovenbal 50+ poster" class="rounded-2xl w-full h-48 object-cover shadow-md" loading="lazy">
+                    <img src="images/img-0964.webp" alt="Carnavalsoptreden" class="rounded-2xl w-full h-48 object-cover shadow-md" loading="lazy">
+                    <img src="images/img-0639.jpeg" alt="Jeugdpronkzitting" class="rounded-2xl w-full h-48 object-cover shadow-md" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Repair Café -->
+    <section id="repair-cafe" class="py-20 animated-pattern">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div class="order-2 lg:order-1">
+                    <img src="images/img-1200.jpeg" alt="Repair Café Ravenstein logo" class="rounded-2xl shadow-lg w-full max-w-md mx-auto" loading="lazy">
+                </div>
+                <div class="order-1 lg:order-2">
+                    <span class="inline-block bg-green-100 text-green-700 font-semibold px-4 py-1.5 rounded-full text-sm mb-4">Elke 1e zaterdag van de maand</span>
+                    <h2 class="font-display text-3xl md:text-4xl text-dark mb-6">Repair Café</h2>
+                    <p class="text-dark/70 text-lg mb-6">Bij het Repair Café helpen we buurtgenoten hun kapotte spullen nieuw leven in te blazen — van broodroosters tot fietsen, van truien tot stoelen. En dat doen we samen, in een gezellige sfeer, met koffie en thee binnen handbereik.</p>
+                    <h3 class="font-semibold text-dark mb-3">Vrijwilligers gezocht!</h3>
+                    <ul class="text-dark/70 space-y-2 mb-6">
+                        <li class="flex items-start gap-2"><svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Reparateur (elektronica, textiel, hout, fietsen)</li>
+                        <li class="flex items-start gap-2"><svg class="w-5 h-5 text-green-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Gastheer/gastvrouw (ontvangst, koffie/thee)</li>
+                    </ul>
+                    <p class="text-dark/70 mb-6">Meer info: <a href="https://www.repaircafe.nl" target="_blank" rel="noopener" class="text-primary hover:text-primary-light underline cursor-pointer">www.repaircafe.nl</a></p>
+                    <a href="mailto:info@vidireo.nl" class="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl font-semibold transition-colors duration-200 cursor-pointer inline-block min-h-[44px]">Aanmelden als vrijwilliger</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Koffie & Lunch -->
+    <section id="koffie" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="inline-block bg-amber-100 text-amber-700 font-semibold px-4 py-1.5 rounded-full text-sm mb-4">Wekelijks</span>
+                    <h2 class="font-display text-3xl md:text-4xl text-dark mb-6">Koffie & Lunch</h2>
+                    <div class="space-y-6">
+                        <div class="bg-bg rounded-2xl p-6">
+                            <h3 class="font-semibold text-dark mb-2">Koffie drinken</h3>
+                            <p class="text-dark/70">Elke dinsdagochtend van 10:00 – 12:00 uur. Kom langs voor een kopje koffie, een goed gesprek en een gezellige sfeer. Iedere dinsdag staat de koffie klaar in VidiReo.</p>
+                        </div>
+                        <div class="bg-bg rounded-2xl p-6">
+                            <h3 class="font-semibold text-dark mb-2">Gezellige lunch</h3>
+                            <p class="text-dark/70">Elke donderdagmiddag wordt er een gezellige lunch georganiseerd door de zorgcoöperatie. Je neemt zelf je boterhammen met beleg mee, voor de rest wordt gezorgd.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="images/img-0832.jpeg" alt="Cappuccino" class="rounded-2xl w-full h-48 object-cover shadow-md" loading="lazy">
+                    <img src="images/img-1168.jpeg" alt="Time for Lunch" class="rounded-2xl w-full h-48 object-cover shadow-md" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Verenigingen -->
+    <section id="verenigingen" class="py-20 animated-pattern">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <h2 class="font-display text-3xl md:text-4xl text-dark mb-4 text-center">Onze huisgenoten</h2>
+            <p class="text-dark/70 text-lg text-center max-w-2xl mx-auto mb-12">Verschillende verenigingen en organisaties vinden hun plek bij VidiReo.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-md">
+                    <h3 class="font-display text-xl text-dark mb-3">CV De Narrekap</h3>
+                    <p class="text-dark/70">De carnavalsvereniging van Ravenstein organiseert o.a. de Prins Onthulling en het Keienschijtersbal.</p>
+                </div>
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-md">
+                    <h3 class="font-display text-xl text-dark mb-3">KBO</h3>
+                    <p class="text-dark/70">De Katholieke Bond van Ouderen draagt bij aan welzijn, vitaliteit en verbondenheid van ouderen in Ravenstein.</p>
+                </div>
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-md">
+                    <h3 class="font-display text-xl text-dark mb-3">Soos Madhouse</h3>
+                    <p class="text-dark/70">Al jaren een bruisend centrum van gezelligheid en jongerenactiviteiten in Ravenstein.</p>
+                </div>
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-md">
+                    <h3 class="font-display text-xl text-dark mb-3">Zorgcoöperatie Ravenstein</h3>
+                    <p class="text-dark/70">Gedragen door inwoners zelf, sterk voor informele zorg, ondersteuning en verbinding in de buurt.</p>
+                </div>
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-md">
+                    <img src="images/img-1167.png" alt="Mix of Music logo" class="h-12 mb-4" loading="lazy">
+                    <h3 class="font-display text-xl text-dark mb-3">Mix of Music</h3>
+                    <p class="text-dark/70">Koor uit Ravenstein dat regelmatig repeteert en optreedt bij VidiReo.</p>
+                </div>
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-md">
+                    <h3 class="font-display text-xl text-dark mb-3">De Ravenna's</h3>
+                    <p class="text-dark/70">Organiseren regelmatig evenementen en optredens in VidiReo.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dagbesteding -->
+    <section class="py-16 bg-primary text-white text-center">
+        <div class="max-w-3xl mx-auto px-4 md:px-6 lg:px-8">
+            <h2 class="font-display text-3xl mb-4">Dagbesteding</h2>
+            <p class="text-white/80 text-lg">VidiReo biedt ook ruimte aan dagbesteding, waar mensen die ondersteuning nodig hebben een zinvolle invulling van hun dag vinden. Een warme, veilige plek waar persoonlijke aandacht, structuur en betrokkenheid centraal staan — midden in de samenleving.</p>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-white text-center">
+        <div class="max-w-3xl mx-auto px-4 md:px-6 lg:px-8">
+            <h2 class="font-display text-3xl text-dark mb-4">Meedoen?</h2>
+            <p class="text-dark/70 mb-8">Neem contact op met Ron Cretier: 06-23883724 of info@vidireo.nl</p>
+            <a href="contact.html" class="bg-cta hover:bg-cta-hover text-white px-8 py-4 rounded-xl font-semibold text-lg transition-colors duration-200 cursor-pointer inline-block min-h-[44px]">Neem contact op</a>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-16"><div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8"><div class="grid grid-cols-1 md:grid-cols-4 gap-12"><div><h3 class="font-display text-2xl mb-4">VidiReo</h3><p class="text-white/60 text-sm">Het kloppend hart van Ravenstein.</p></div><div><h4 class="font-semibold mb-4">Pagina's</h4><ul class="space-y-2 text-white/60"><li><a href="over-ons.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Over ons</a></li><li><a href="zaalhuur-catering.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Zaalhuur & Catering</a></li><li><a href="activiteiten.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Activiteiten</a></li><li><a href="filmhuis.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Filmhuis</a></li></ul></div><div><h4 class="font-semibold mb-4">Contact</h4><ul class="space-y-2 text-white/60"><li>Van Kesselplaats 2</li><li>5371 AX Ravenstein</li><li><a href="tel:0623883724" class="hover:text-white transition-colors duration-200 cursor-pointer">06-23883724</a></li><li><a href="mailto:info@vidireo.nl" class="hover:text-white transition-colors duration-200 cursor-pointer">info@vidireo.nl</a></li></ul></div><div><h4 class="font-semibold mb-4">Meer</h4><ul class="space-y-2 text-white/60"><li><a href="nieuwbouw.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Nieuwbouw</a></li><li><a href="galerij.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Galerij</a></li><li><a href="contact.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Contact</a></li></ul></div></div><div class="border-t border-white/10 mt-12 pt-8 text-center text-white/40 text-sm"><p>&copy; 2026 VidiReo — Ravenstein. Gebouwd door <a href="https://www.code-lieshout.nl" class="hover:text-white transition-colors duration-200 cursor-pointer underline">Code Lieshout</a></p></div></div></footer>
+    <script>document.getElementById('menu-toggle').addEventListener('click',()=>document.getElementById('mobile-menu').classList.toggle('hidden'));</script>
+</body>
+</html>

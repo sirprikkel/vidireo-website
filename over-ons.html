@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Over ons — VidiReo Ravenstein</title>
+    <meta name="description" content="VidiReo beschikt over 3 zalen, een groot terras en catering. Het kloppend hart van Ravenstein voor feesten, vergaderingen, exposities en meer.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Righteous&display=swap" rel="stylesheet">
+    <script defer src="https://analytics.code-lieshout.nl/script.js" data-website-id="ac17493c-726b-4335-89a7-b11991bc7275"></script>
+    <script>
+        tailwind.config = {
+            theme: { extend: {
+                colors: { primary: '#4F46E5', 'primary-light': '#818CF8', cta: '#F97316', 'cta-hover': '#EA580C', bg: '#EEF2FF', dark: '#1E1B4B' },
+                fontFamily: { display: ['Righteous', 'sans-serif'], sans: ['Poppins', 'sans-serif'] }
+            }}
+        }
+    </script>
+    <style>
+        @keyframes patternMove { 0% { background-position: 0 0; } 100% { background-position: 60px 60px; } }
+        .animated-pattern { background-image: radial-gradient(circle, rgba(79,70,229,0.07) 1px, transparent 1px); background-size: 30px 30px; animation: patternMove 8s linear infinite; }
+        @media (prefers-reduced-motion: reduce) { .animated-pattern { animation: none; } }
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="font-sans text-dark bg-bg antialiased">
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex items-center justify-between h-16">
+            <a href="index.html" class="font-display text-2xl text-primary cursor-pointer">VidiReo</a>
+            <div class="hidden md:flex items-center gap-6">
+                <a href="index.html" class="text-dark font-medium hover:text-primary transition-colors duration-200 cursor-pointer">Home</a>
+                <a href="over-ons.html" class="text-primary font-medium cursor-pointer">Over ons</a>
+                <a href="activiteiten.html" class="text-dark font-medium hover:text-primary transition-colors duration-200 cursor-pointer">Activiteiten</a>
+                <a href="zaalhuur-catering.html" class="text-dark font-medium hover:text-primary transition-colors duration-200 cursor-pointer">Zaalhuur & Catering</a>
+                <a href="filmhuis.html" class="text-dark font-medium hover:text-primary transition-colors duration-200 cursor-pointer">Filmhuis</a>
+                <a href="galerij.html" class="text-dark font-medium hover:text-primary transition-colors duration-200 cursor-pointer">Galerij</a>
+                <a href="contact.html" class="bg-cta hover:bg-cta-hover text-white px-5 py-2.5 rounded-lg font-semibold transition-colors duration-200 cursor-pointer">Contact</a>
+            </div>
+            <button id="menu-toggle" class="md:hidden p-2 min-h-[44px] min-w-[44px] flex items-center justify-center cursor-pointer" aria-label="Menu"><svg class="w-7 h-7 text-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-4 flex flex-col gap-3">
+                <a href="index.html" class="py-2 text-dark font-medium cursor-pointer">Home</a>
+                <a href="over-ons.html" class="py-2 text-primary font-medium cursor-pointer">Over ons</a>
+                <a href="activiteiten.html" class="py-2 text-dark font-medium cursor-pointer">Activiteiten</a>
+                <a href="zaalhuur-catering.html" class="py-2 text-dark font-medium cursor-pointer">Zaalhuur & Catering</a>
+                <a href="filmhuis.html" class="py-2 text-dark font-medium cursor-pointer">Filmhuis</a>
+                <a href="galerij.html" class="py-2 text-dark font-medium cursor-pointer">Galerij</a>
+                <a href="contact.html" class="bg-cta text-white px-5 py-2.5 rounded-lg font-semibold text-center cursor-pointer">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="pt-28 pb-16 md:pt-36 md:pb-24 animated-pattern">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <h1 class="font-display text-4xl md:text-6xl text-dark mb-6">Over VidiReo</h1>
+            <p class="text-dark/70 text-lg md:text-xl max-w-3xl">Het kloppend hart van Ravenstein. Een plek waar mensen, ideeën en krachten zich verenigen.</p>
+        </div>
+    </section>
+
+    <!-- Zalen -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <h2 class="font-display text-3xl md:text-4xl text-dark mb-12">Onze zalen</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-bg rounded-2xl p-8">
+                    <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                    </div>
+                    <h3 class="font-display text-xl text-dark mb-3">Grachtenzaal</h3>
+                    <p class="text-dark/70">Geschikt voor vergaderingen tot 50 personen, feesten tot 100 personen, repetities, uitvoeringen, exposities, boekpresentaties, beurzen en concerten. Vaste geluidsinstallatie aanwezig.</p>
+                </div>
+                <div class="bg-bg rounded-2xl p-8">
+                    <div class="w-12 h-12 bg-primary-light/20 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-primary-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"/></svg>
+                    </div>
+                    <h3 class="font-display text-xl text-dark mb-3">Harmoniezaal</h3>
+                    <p class="text-dark/70">Extra set, ook te koppelen met de Grachtenzaal. Voorzien van projectiescherm (4x3 meter) met beamer. Ideaal voor filmvertoningen en presentaties.</p>
+                </div>
+                <div class="bg-bg rounded-2xl p-8">
+                    <div class="w-12 h-12 bg-cta/10 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6 text-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                    </div>
+                    <h3 class="font-display text-xl text-dark mb-3">De Crèche</h3>
+                    <p class="text-dark/70">Eigen ingang, bar, geluidsinstallatie, beamer en toiletten. Ideaal voor babyshowers, verjaardagen, vergaderingen en feestjes. Bij mooi weer terrasdeuren open.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Terras foto -->
+    <section class="py-16 bg-bg">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <img src="images/google/google_place_1.jpg" alt="Kleurrijk terras VidiReo" class="rounded-2xl shadow-lg w-full h-80 object-cover" loading="lazy">
+                <div>
+                    <h2 class="font-display text-3xl text-dark mb-4">Grachtenterras</h2>
+                    <p class="text-dark/70 text-lg mb-6">Bij de Grachtenzaal en De Crèche beschikt VidiReo over een groot terras met uitzicht op het water. De perfecte plek voor een borrel, een kop koffie of een zomers feest in de buitenlucht.</p>
+                    <a href="contact.html" class="bg-cta hover:bg-cta-hover text-white px-6 py-3 rounded-xl font-semibold transition-colors duration-200 cursor-pointer inline-block min-h-[44px]">Informeer naar mogelijkheden</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Wie zijn wij -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 md:px-6 lg:px-8">
+            <h2 class="font-display text-3xl md:text-4xl text-dark mb-6">Wie zijn wij</h2>
+            <p class="text-dark/70 text-lg mb-6">Bij VidiReo draait alles om samenkomen, beleven en verbinden. Of je nu komt voor een gezellige filmavond, een spetterend feest, je favoriete vereniging of de legendarische carnaval, hier voel je je altijd thuis.</p>
+            <p class="text-dark/70 text-lg mb-6">Onze deuren staan altijd open voor iedereen in de buurt, jong en oud. VidiReo is niet zomaar een buurthuis, het is een plek waar herinneringen worden gemaakt, vriendschappen ontstaan en de buurt écht samenkomt.</p>
+            <p class="text-dark/70 text-lg">Wij geloven in de kracht van samen. VidiReo is de plek waar de gemeenschap leeft, waar de glimlachen breed zijn, en waar iedereen zichzelf kan zijn.</p>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-16 bg-primary text-white text-center">
+        <div class="max-w-3xl mx-auto px-4 md:px-6 lg:px-8">
+            <h2 class="font-display text-3xl mb-4">Neem contact op</h2>
+            <p class="text-white/80 mb-8">Bel Ron Cretier op 06-23883724 of mail naar info@vidireo.nl</p>
+            <a href="contact.html" class="bg-cta hover:bg-cta-hover text-white px-8 py-4 rounded-xl font-semibold text-lg transition-colors duration-200 cursor-pointer inline-block min-h-[44px]">Naar contact</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div><h3 class="font-display text-2xl mb-4">VidiReo</h3><p class="text-white/60 text-sm">Het kloppend hart van Ravenstein.</p></div>
+                <div><h4 class="font-semibold mb-4">Pagina's</h4><ul class="space-y-2 text-white/60"><li><a href="over-ons.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Over ons</a></li><li><a href="zaalhuur-catering.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Zaalhuur & Catering</a></li><li><a href="activiteiten.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Activiteiten</a></li><li><a href="filmhuis.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Filmhuis</a></li></ul></div>
+                <div><h4 class="font-semibold mb-4">Contact</h4><ul class="space-y-2 text-white/60"><li>Van Kesselplaats 2</li><li>5371 AX Ravenstein</li><li><a href="tel:0623883724" class="hover:text-white transition-colors duration-200 cursor-pointer">06-23883724</a></li><li><a href="mailto:info@vidireo.nl" class="hover:text-white transition-colors duration-200 cursor-pointer">info@vidireo.nl</a></li></ul></div>
+                <div><h4 class="font-semibold mb-4">Meer</h4><ul class="space-y-2 text-white/60"><li><a href="nieuwbouw.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Nieuwbouw</a></li><li><a href="galerij.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Galerij</a></li><li><a href="contact.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Contact</a></li></ul></div>
+            </div>
+            <div class="border-t border-white/10 mt-12 pt-8 text-center text-white/40 text-sm"><p>&copy; 2026 VidiReo — Ravenstein. Gebouwd door <a href="https://www.code-lieshout.nl" class="hover:text-white transition-colors duration-200 cursor-pointer underline">Code Lieshout</a></p></div>
+        </div>
+    </footer>
+    <script>document.getElementById('menu-toggle').addEventListener('click',()=>document.getElementById('mobile-menu').classList.toggle('hidden'));</script>
+</body>
+</html>

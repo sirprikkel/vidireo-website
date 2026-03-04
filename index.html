@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VidiReo — Het kloppend hart van Ravenstein</title>
+    <meta name="description" content="VidiReo is het gemeenschapshuis van Ravenstein. Zaalhuur, catering, filmhuis, repair café, carnaval en meer. Samenkomen, beleven en verbinden.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Righteous&display=swap" rel="stylesheet">
+    <script defer src="https://analytics.code-lieshout.nl/script.js" data-website-id="ac17493c-726b-4335-89a7-b11991bc7275"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4F46E5',
+                        'primary-light': '#818CF8',
+                        cta: '#F97316',
+                        'cta-hover': '#EA580C',
+                        bg: '#EEF2FF',
+                        dark: '#1E1B4B',
+                    },
+                    fontFamily: {
+                        display: ['Righteous', 'sans-serif'],
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    gap: {
+                        'block': '48px',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @keyframes patternMove {
+            0% { background-position: 0 0; }
+            100% { background-position: 60px 60px; }
+        }
+        .animated-pattern {
+            background-image: radial-gradient(circle, rgba(79,70,229,0.07) 1px, transparent 1px);
+            background-size: 30px 30px;
+            animation: patternMove 8s linear infinite;
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .animated-pattern { animation: none; }
+        }
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(30,27,75,0.85) 0%, rgba(79,70,229,0.7) 100%);
+        }
+        .card-hover {
+            transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(79,70,229,0.15);
+        }
+        html { scroll-behavior: smooth; }
+        @media (prefers-reduced-motion: reduce) {
+            html { scroll-behavior: auto; }
+        }
+    </style>
+</head>
+<body class="font-sans text-dark bg-bg antialiased">
+
+    <!-- Navbar -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex items-center justify-between h-16">
+            <a href="index.html" class="font-display text-2xl text-primary cursor-pointer">VidiReo</a>
+            <div class="hidden md:flex items-center gap-6">
+                <a href="index.html" class="text-dark font-medium hover:text-primary transition-colors duration-200 cursor-pointer">Home</a>
+                <a href="over-ons.html" class="text-dark font-medium hover:text-primary transition-colors duration-200 cursor-pointer">Over ons</a>
+                <a href="activiteiten.html" class="text-dark font-medium hover:text-primary transition-colors duration-200 cursor-pointer">Activiteiten</a>
+                <a href="zaalhuur-catering.html" class="text-dark font-medium hover:text-primary transition-colors duration-200 cursor-pointer">Zaalhuur & Catering</a>
+                <a href="filmhuis.html" class="text-dark font-medium hover:text-primary transition-colors duration-200 cursor-pointer">Filmhuis</a>
+                <a href="galerij.html" class="text-dark font-medium hover:text-primary transition-colors duration-200 cursor-pointer">Galerij</a>
+                <a href="contact.html" class="bg-cta hover:bg-cta-hover text-white px-5 py-2.5 rounded-lg font-semibold transition-colors duration-200 cursor-pointer">Contact</a>
+            </div>
+            <!-- Mobile hamburger -->
+            <button id="menu-toggle" class="md:hidden p-2 min-h-[44px] min-w-[44px] flex items-center justify-center cursor-pointer" aria-label="Menu openen">
+                <svg class="w-7 h-7 text-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </button>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-4 py-4 flex flex-col gap-3">
+                <a href="index.html" class="py-2 text-dark font-medium hover:text-primary transition-colors duration-200 cursor-pointer">Home</a>
+                <a href="over-ons.html" class="py-2 text-dark font-medium hover:text-primary transition-colors duration-200 cursor-pointer">Over ons</a>
+                <a href="activiteiten.html" class="py-2 text-dark font-medium hover:text-primary transition-colors duration-200 cursor-pointer">Activiteiten</a>
+                <a href="zaalhuur-catering.html" class="py-2 text-dark font-medium hover:text-primary transition-colors duration-200 cursor-pointer">Zaalhuur & Catering</a>
+                <a href="filmhuis.html" class="py-2 text-dark font-medium hover:text-primary transition-colors duration-200 cursor-pointer">Filmhuis</a>
+                <a href="galerij.html" class="py-2 text-dark font-medium hover:text-primary transition-colors duration-200 cursor-pointer">Galerij</a>
+                <a href="contact.html" class="bg-cta text-white px-5 py-2.5 rounded-lg font-semibold text-center cursor-pointer">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden mt-16">
+        <img src="images/buiten-nieuw.jpg" alt="VidiReo terras aan het water in Ravenstein" class="absolute inset-0 w-full h-full object-cover" loading="eager">
+        <div class="hero-overlay absolute inset-0"></div>
+        <div class="relative z-10 text-center px-4 md:px-6 max-w-4xl">
+            <h1 class="font-display text-4xl md:text-6xl lg:text-7xl text-white mb-6 leading-tight">Het kloppend hart van Ravenstein</h1>
+            <p class="text-white/90 text-lg md:text-xl font-light max-w-2xl mx-auto mb-10">Bij VidiReo draait alles om samenkomen, beleven en verbinden. Een plek waar herinneringen worden gemaakt en de buurt écht samenkomt.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="zaalhuur-catering.html" class="bg-cta hover:bg-cta-hover text-white px-8 py-4 rounded-xl font-semibold text-lg transition-colors duration-200 cursor-pointer min-h-[44px]">Zaal reserveren</a>
+                <a href="#activiteiten" class="bg-white/15 hover:bg-white/25 text-white border-2 border-white/30 px-8 py-4 rounded-xl font-semibold text-lg transition-colors duration-200 cursor-pointer backdrop-blur-sm min-h-[44px]">Bekijk activiteiten</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="bg-primary py-8">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+            <div>
+                <div class="font-display text-3xl md:text-4xl text-white">3</div>
+                <div class="text-white/80 text-sm mt-1">Zalen</div>
+            </div>
+            <div>
+                <div class="font-display text-3xl md:text-4xl text-white">100+</div>
+                <div class="text-white/80 text-sm mt-1">Personen capaciteit</div>
+            </div>
+            <div>
+                <div class="font-display text-3xl md:text-4xl text-white">3.9</div>
+                <div class="text-white/80 text-sm mt-1">Google rating ⭐</div>
+            </div>
+            <div>
+                <div class="font-display text-3xl md:text-4xl text-white">60+</div>
+                <div class="text-white/80 text-sm mt-1">Reviews</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activiteiten -->
+    <section id="activiteiten" class="animated-pattern py-20 md:py-28">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="font-display text-3xl md:text-5xl text-dark mb-4">Wat gebeurt er bij VidiReo?</h2>
+                <p class="text-dark/70 text-lg max-w-2xl mx-auto">Van filmavonden tot carnaval, van vergaderingen tot feesten — er is altijd iets te beleven.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-block">
+                <!-- Zaalhuur -->
+                <a href="zaalhuur-catering.html" class="card-hover bg-white rounded-2xl p-8 shadow-md cursor-pointer block">
+                    <div class="w-14 h-14 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                    </div>
+                    <h3 class="font-display text-xl text-dark mb-3">Zaalhuur & Catering</h3>
+                    <p class="text-dark/70">3 zalen, groot terras. Vergaderingen, feesten, exposities, concerten. Catering geheel naar wens, ook op locatie.</p>
+                </a>
+                <!-- Filmhuis -->
+                <a href="filmhuis.html" class="card-hover bg-white rounded-2xl p-8 shadow-md cursor-pointer block">
+                    <div class="w-14 h-14 bg-cta/10 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/></svg>
+                    </div>
+                    <h3 class="font-display text-xl text-dark mb-3">Filmhuis Ravenstein</h3>
+                    <p class="text-dark/70">Elke 1e woensdag van de maand. Bijzondere, ontroerende of meeslepende films in een warme sfeer. Entree €5,00.</p>
+                </a>
+                <!-- Carnaval -->
+                <a href="activiteiten.html" class="card-hover bg-white rounded-2xl p-8 shadow-md cursor-pointer block">
+                    <div class="w-14 h-14 bg-primary-light/20 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-primary-light" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h3 class="font-display text-xl text-dark mb-3">Carnaval</h3>
+                    <p class="text-dark/70">Het epicentrum van de gezelligste tijd van het jaar! Keienschijtersbal, Raovenbal 50+, Jeugdpronkzitting en meer.</p>
+                </a>
+                <!-- Repair Café -->
+                <a href="activiteiten.html#repair-cafe" class="card-hover bg-white rounded-2xl p-8 shadow-md cursor-pointer block">
+                    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.066 2.573c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.573 1.066c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.066-2.573c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </div>
+                    <h3 class="font-display text-xl text-dark mb-3">Repair Café</h3>
+                    <p class="text-dark/70">Elke 1e zaterdag van de maand. Geef kapotte spullen een tweede leven — van broodroosters tot fietsen.</p>
+                </a>
+                <!-- Koffie & Lunch -->
+                <a href="activiteiten.html#koffie" class="card-hover bg-white rounded-2xl p-8 shadow-md cursor-pointer block">
+                    <div class="w-14 h-14 bg-amber-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h18v2H3V3zm0 4h12v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7zm14 0h2a2 2 0 012 2v2a2 2 0 01-2 2h-2V7z"/></svg>
+                    </div>
+                    <h3 class="font-display text-xl text-dark mb-3">Koffie & Lunch</h3>
+                    <p class="text-dark/70">Elke dinsdagochtend koffie drinken (10-12 uur). Elke donderdag gezellige lunch via de zorgcoöperatie.</p>
+                </a>
+                <!-- Verenigingen -->
+                <a href="activiteiten.html#verenigingen" class="card-hover bg-white rounded-2xl p-8 shadow-md cursor-pointer block">
+                    <div class="w-14 h-14 bg-rose-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-rose-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                    </div>
+                    <h3 class="font-display text-xl text-dark mb-3">Verenigingen</h3>
+                    <p class="text-dark/70">KBO, Soos Madhouse, Zorgcoöperatie, Mix of Music, CV De Narrekap en meer vinden hun plek bij VidiReo.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Over VidiReo -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="font-display text-3xl md:text-5xl text-dark mb-6">Niet zomaar een buurthuis</h2>
+                    <p class="text-dark/70 text-lg mb-6">VidiReo is een plek waar herinneringen worden gemaakt, vriendschappen ontstaan en de buurt écht samenkomt. Of je nu komt voor een gezellige filmavond, een spetterend feest, je favoriete vereniging of de legendarische carnaval — hier voel je je altijd thuis.</p>
+                    <p class="text-dark/70 text-lg mb-8">Onze deuren staan altijd open voor iedereen in de buurt, jong en oud.</p>
+                    <a href="over-ons.html" class="inline-flex items-center gap-2 text-primary font-semibold hover:text-primary-light transition-colors duration-200 cursor-pointer">
+                        Meer over VidiReo
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                    </a>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <img src="images/google/google_place_1.jpg" alt="Kleurrijk terras VidiReo" class="rounded-2xl shadow-lg w-full h-48 object-cover" loading="lazy">
+                    <img src="images/google/google_place_4.jpg" alt="Bar interieur VidiReo" class="rounded-2xl shadow-lg w-full h-48 object-cover" loading="lazy">
+                    <img src="images/img-1165.jpeg" alt="Gezellige groepslunch bij VidiReo" class="rounded-2xl shadow-lg w-full h-48 object-cover col-span-2" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof / Reviews -->
+    <section class="animated-pattern py-20 md:py-28">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 text-center">
+            <h2 class="font-display text-3xl md:text-5xl text-dark mb-4">Wat bezoekers zeggen</h2>
+            <div class="flex items-center justify-center gap-2 mb-12">
+                <span class="font-display text-2xl text-cta">3.9</span>
+                <div class="flex gap-0.5">
+                    <svg class="w-6 h-6 text-cta" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-6 h-6 text-cta" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-6 h-6 text-cta" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-6 h-6 text-cta" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    <svg class="w-6 h-6 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                </div>
+                <span class="text-dark/50 text-sm">op Google (60 reviews)</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl p-8 shadow-md text-left">
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-5 h-5 text-cta" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-cta" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-cta" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-cta" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-cta" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <p class="text-dark/70 italic mb-4">"Gezellig terras, hartelijk ontvangst met fantastisch uitzicht op leerlooierij."</p>
+                    <p class="font-semibold text-dark">— luts procee</p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-md text-left">
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-5 h-5 text-cta" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-cta" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-cta" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-cta" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-cta" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <p class="text-dark/70 italic mb-4">"Heb hier meerdere feesten gehad met familie en elke keer beviel het uitstekend."</p>
+                    <p class="font-semibold text-dark">— toon van esch</p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-md text-left">
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-5 h-5 text-cta" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-cta" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-cta" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-cta" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                        <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                    </div>
+                    <p class="text-dark/70 italic mb-4">"Leuke plek, iets wat verouderd maar wel netjes. Vriendelijk personeel."</p>
+                    <p class="font-semibold text-dark">— tat too</p>
+                </div>
+            </div>
+            <a href="https://maps.google.com/?cid=VidiReo+Ravenstein" target="_blank" rel="noopener" class="inline-flex items-center gap-2 mt-10 text-primary font-semibold hover:text-primary-light transition-colors duration-200 cursor-pointer">
+                Bekijk alle reviews op Google
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Nieuwbouw -->
+    <section class="py-20 md:py-28 bg-primary text-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 text-center">
+            <h2 class="font-display text-3xl md:text-5xl mb-6">Het nieuwe VidiReo komt eraan</h2>
+            <p class="text-white/80 text-lg max-w-3xl mx-auto mb-8">Nog even en dan start de bouw van het nieuwe VidiReo. Een toekomstbestendige, duurzame en moderne ruimte die uitnodigt tot ontmoeting, creativiteit en groei. Voor iedereen, door iedereen — Ravenstein en omstreken.</p>
+            <a href="nieuwbouw.html" class="inline-block bg-cta hover:bg-cta-hover text-white px-8 py-4 rounded-xl font-semibold text-lg transition-colors duration-200 cursor-pointer min-h-[44px]">Lees meer over de nieuwbouw</a>
+        </div>
+    </section>
+
+    <!-- Galerij Preview -->
+    <section class="py-20 md:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="font-display text-3xl md:text-5xl text-dark mb-4">Een kijkje bij VidiReo</h2>
+            </div>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <img src="images/buiten-nieuw.jpg" alt="Terras VidiReo" class="rounded-2xl w-full h-40 md:h-56 object-cover shadow-md" loading="lazy">
+                <img src="images/google/google_place_2.jpg" alt="Groen dorpsgezicht VidiReo" class="rounded-2xl w-full h-40 md:h-56 object-cover shadow-md" loading="lazy">
+                <img src="images/google/google_place_3.jpg" alt="Biertjes op terras" class="rounded-2xl w-full h-40 md:h-56 object-cover shadow-md" loading="lazy">
+                <img src="images/img-0832.jpeg" alt="Cappuccino VidiReo" class="rounded-2xl w-full h-40 md:h-56 object-cover shadow-md" loading="lazy">
+                <img src="images/img-7445.jpeg" alt="Gedekte tafel" class="rounded-2xl w-full h-40 md:h-56 object-cover shadow-md" loading="lazy">
+                <img src="images/img-7616.jpeg" alt="Carnaval optreden" class="rounded-2xl w-full h-40 md:h-56 object-cover shadow-md" loading="lazy">
+                <img src="images/google/google_place_5.jpg" alt="Expositie in VidiReo" class="rounded-2xl w-full h-40 md:h-56 object-cover shadow-md" loading="lazy">
+                <img src="images/img-0964.webp" alt="Carnavalsoptreden podium" class="rounded-2xl w-full h-40 md:h-56 object-cover shadow-md" loading="lazy">
+            </div>
+            <div class="text-center mt-8">
+                <a href="galerij.html" class="inline-flex items-center gap-2 text-primary font-semibold hover:text-primary-light transition-colors duration-200 cursor-pointer">
+                    Bekijk alle foto's
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact CTA -->
+    <section class="animated-pattern py-20 md:py-28">
+        <div class="max-w-3xl mx-auto px-4 md:px-6 lg:px-8 text-center">
+            <h2 class="font-display text-3xl md:text-5xl text-dark mb-4">Neem contact op</h2>
+            <p class="text-dark/70 text-lg mb-8">Wilt u een zaal huren, catering bespreken of heeft u een andere vraag? Neem vrijblijvend contact op.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <a href="tel:0623883724" class="bg-primary hover:bg-primary-light text-white px-8 py-4 rounded-xl font-semibold text-lg transition-colors duration-200 cursor-pointer min-h-[44px] flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                    06-23883724
+                </a>
+                <a href="mailto:info@vidireo.nl" class="bg-cta hover:bg-cta-hover text-white px-8 py-4 rounded-xl font-semibold text-lg transition-colors duration-200 cursor-pointer min-h-[44px] flex items-center justify-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                    info@vidireo.nl
+                </a>
+            </div>
+            <p class="text-dark/50 text-sm">Van Kesselplaats 2, 5371 AX Ravenstein</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div>
+                    <h3 class="font-display text-2xl mb-4">VidiReo</h3>
+                    <p class="text-white/60 text-sm">Het kloppend hart van Ravenstein. Samenkomen, beleven en verbinden.</p>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Pagina's</h4>
+                    <ul class="space-y-2 text-white/60">
+                        <li><a href="over-ons.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Over ons</a></li>
+                        <li><a href="zaalhuur-catering.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Zaalhuur & Catering</a></li>
+                        <li><a href="activiteiten.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Activiteiten</a></li>
+                        <li><a href="filmhuis.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Filmhuis</a></li>
+                        <li><a href="galerij.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Galerij</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-white/60">
+                        <li>Van Kesselplaats 2</li>
+                        <li>5371 AX Ravenstein</li>
+                        <li><a href="tel:0623883724" class="hover:text-white transition-colors duration-200 cursor-pointer">06-23883724</a></li>
+                        <li><a href="mailto:info@vidireo.nl" class="hover:text-white transition-colors duration-200 cursor-pointer">info@vidireo.nl</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Activiteiten</h4>
+                    <ul class="space-y-2 text-white/60">
+                        <li><a href="nieuwbouw.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Nieuwbouw</a></li>
+                        <li><a href="activiteiten.html#repair-cafe" class="hover:text-white transition-colors duration-200 cursor-pointer">Repair Café</a></li>
+                        <li><a href="activiteiten.html#koffie" class="hover:text-white transition-colors duration-200 cursor-pointer">Koffie & Lunch</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-white/10 mt-12 pt-8 text-center text-white/40 text-sm">
+                <p>&copy; 2026 VidiReo — Ravenstein. Gebouwd door <a href="https://www.code-lieshout.nl" class="hover:text-white transition-colors duration-200 cursor-pointer underline">Code Lieshout</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const toggle = document.getElementById('menu-toggle');
+        const menu = document.getElementById('mobile-menu');
+        toggle.addEventListener('click', () => menu.classList.toggle('hidden'));
+    </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filmhuis Ravenstein — VidiReo</title>
+    <meta name="description" content="Filmhuis Ravenstein bij VidiReo. Elke 1e woensdag van de maand een filmavond. Aanvang 19:30 uur, entree €5,00.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Righteous&display=swap" rel="stylesheet">
+    <script defer src="https://analytics.code-lieshout.nl/script.js" data-website-id="ac17493c-726b-4335-89a7-b11991bc7275"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#4F46E5','primary-light':'#818CF8',cta:'#F97316','cta-hover':'#EA580C',bg:'#EEF2FF',dark:'#1E1B4B'},fontFamily:{display:['Righteous','sans-serif'],sans:['Poppins','sans-serif']}}}}</script>
+    <style>
+        @keyframes patternMove{0%{background-position:0 0}100%{background-position:60px 60px}}.animated-pattern{background-image:radial-gradient(circle,rgba(79,70,229,0.07) 1px,transparent 1px);background-size:30px 30px;animation:patternMove 8s linear infinite}@media(prefers-reduced-motion:reduce){.animated-pattern{animation:none}}html{scroll-behavior:smooth}
+    </style>
+</head>
+<body class="font-sans text-dark bg-bg antialiased">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm"><div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex items-center justify-between h-16"><a href="index.html" class="font-display text-2xl text-primary cursor-pointer">VidiReo</a><div class="hidden md:flex items-center gap-6"><a href="index.html" class="text-dark font-medium hover:text-primary transition-colors duration-200 cursor-pointer">Home</a><a href="over-ons.html" class="text-dark font-medium hover:text-primary transition-colors duration-200 cursor-pointer">Over ons</a><a href="activiteiten.html" class="text-dark font-medium hover:text-primary transition-colors duration-200 cursor-pointer">Activiteiten</a><a href="zaalhuur-catering.html" class="text-dark font-medium hover:text-primary transition-colors duration-200 cursor-pointer">Zaalhuur & Catering</a><a href="filmhuis.html" class="text-primary font-medium cursor-pointer">Filmhuis</a><a href="galerij.html" class="text-dark font-medium hover:text-primary transition-colors duration-200 cursor-pointer">Galerij</a><a href="contact.html" class="bg-cta hover:bg-cta-hover text-white px-5 py-2.5 rounded-lg font-semibold transition-colors duration-200 cursor-pointer">Contact</a></div><button id="menu-toggle" class="md:hidden p-2 min-h-[44px] min-w-[44px] flex items-center justify-center cursor-pointer" aria-label="Menu"><svg class="w-7 h-7 text-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button></div><div id="mobile-menu" class="hidden md:hidden bg-white border-t"><div class="px-4 py-4 flex flex-col gap-3"><a href="index.html" class="py-2 text-dark font-medium cursor-pointer">Home</a><a href="over-ons.html" class="py-2 text-dark font-medium cursor-pointer">Over ons</a><a href="activiteiten.html" class="py-2 text-dark font-medium cursor-pointer">Activiteiten</a><a href="zaalhuur-catering.html" class="py-2 text-dark font-medium cursor-pointer">Zaalhuur & Catering</a><a href="filmhuis.html" class="py-2 text-primary font-medium cursor-pointer">Filmhuis</a><a href="galerij.html" class="py-2 text-dark font-medium cursor-pointer">Galerij</a><a href="contact.html" class="bg-cta text-white px-5 py-2.5 rounded-lg font-semibold text-center cursor-pointer">Contact</a></div></div></nav>
+
+    <!-- Hero -->
+    <section class="relative min-h-[60vh] flex items-center justify-center overflow-hidden mt-16">
+        <div class="absolute inset-0 bg-dark"></div>
+        <div class="relative z-10 text-center px-4 md:px-6 max-w-4xl">
+            <div class="w-16 h-16 bg-cta/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                <svg class="w-8 h-8 text-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 4v16M17 4v16M3 8h4m10 0h4M3 12h18M3 16h4m10 0h4M4 20h16a1 1 0 001-1V5a1 1 0 00-1-1H4a1 1 0 00-1 1v14a1 1 0 001 1z"/></svg>
+            </div>
+            <h1 class="font-display text-4xl md:text-6xl text-white mb-6">Filmhuis Ravenstein</h1>
+            <p class="text-white/80 text-lg md:text-xl max-w-2xl mx-auto mb-8">Elke eerste woensdag van de maand heten wij jullie welkom voor een avond vol filmbeleving. Laat je verrassen door bijzondere, ontroerende of meeslepende films.</p>
+            <div class="flex flex-wrap justify-center gap-6 text-white/90">
+                <div class="flex items-center gap-2"><svg class="w-5 h-5 text-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>Elke 1e woensdag</div>
+                <div class="flex items-center gap-2"><svg class="w-5 h-5 text-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>19:30 uur</div>
+                <div class="flex items-center gap-2"><svg class="w-5 h-5 text-cta" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"/></svg>€5,00 p.p.</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Film -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <h2 class="font-display text-3xl text-dark mb-12 text-center">Binnenkort in VidiReo</h2>
+            <div class="max-w-3xl mx-auto">
+                <div class="bg-bg rounded-2xl overflow-hidden shadow-md">
+                    <div class="grid grid-cols-1 md:grid-cols-3">
+                        <img src="images/img-1166.jpeg" alt="Under the Tuscan Sun" class="w-full h-64 md:h-full object-cover" loading="lazy">
+                        <div class="md:col-span-2 p-8">
+                            <span class="inline-block bg-primary/10 text-primary font-semibold px-3 py-1 rounded-full text-sm mb-3">Woensdagavond 3 september</span>
+                            <h3 class="font-display text-2xl text-dark mb-3">Under the Tuscan Sun</h3>
+                            <p class="text-dark/70 mb-4">"Life offers you a thousand chances… all you have to do is take one." Als Frances, een schrijfster uit San Francisco die net verlaten is door haar echtgenoot, van een goede vriendin een 10 daagse vakantie krijgt aangeboden, koopt ze in een opwelling een vervallen villa in Toscane en stort zich in een avontuur vol onverwachte verrassingen, vriendschappen en romantiek.</p>
+                            <div class="flex items-center gap-4 text-sm text-dark/50">
+                                <span>Aanvang: 19:30 uur</span>
+                                <span>Entree: €5,00 p.p.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reserveren -->
+    <section class="py-16 animated-pattern text-center">
+        <div class="max-w-3xl mx-auto px-4 md:px-6 lg:px-8">
+            <h2 class="font-display text-3xl text-dark mb-4">Reserveren</h2>
+            <p class="text-dark/70 text-lg mb-8">Reserveren kan via de agenda, per mail of telefonisch.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="tel:0623883724" class="bg-primary hover:bg-primary-light text-white px-8 py-4 rounded-xl font-semibold transition-colors duration-200 cursor-pointer min-h-[44px]">06-23883724</a>
+                <a href="mailto:info@vidireo.nl" class="bg-cta hover:bg-cta-hover text-white px-8 py-4 rounded-xl font-semibold transition-colors duration-200 cursor-pointer min-h-[44px]">info@vidireo.nl</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white py-16"><div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8"><div class="grid grid-cols-1 md:grid-cols-4 gap-12"><div><h3 class="font-display text-2xl mb-4">VidiReo</h3><p class="text-white/60 text-sm">Het kloppend hart van Ravenstein.</p></div><div><h4 class="font-semibold mb-4">Pagina's</h4><ul class="space-y-2 text-white/60"><li><a href="over-ons.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Over ons</a></li><li><a href="zaalhuur-catering.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Zaalhuur & Catering</a></li><li><a href="activiteiten.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Activiteiten</a></li><li><a href="filmhuis.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Filmhuis</a></li></ul></div><div><h4 class="font-semibold mb-4">Contact</h4><ul class="space-y-2 text-white/60"><li>Van Kesselplaats 2</li><li>5371 AX Ravenstein</li><li><a href="tel:0623883724" class="hover:text-white transition-colors duration-200 cursor-pointer">06-23883724</a></li><li><a href="mailto:info@vidireo.nl" class="hover:text-white transition-colors duration-200 cursor-pointer">info@vidireo.nl</a></li></ul></div><div><h4 class="font-semibold mb-4">Meer</h4><ul class="space-y-2 text-white/60"><li><a href="nieuwbouw.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Nieuwbouw</a></li><li><a href="galerij.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Galerij</a></li><li><a href="contact.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Contact</a></li></ul></div></div><div class="border-t border-white/10 mt-12 pt-8 text-center text-white/40 text-sm"><p>&copy; 2026 VidiReo — Ravenstein. Gebouwd door <a href="https://www.code-lieshout.nl" class="hover:text-white transition-colors duration-200 cursor-pointer underline">Code Lieshout</a></p></div></div></footer>
+    <script>document.getElementById('menu-toggle').addEventListener('click',()=>document.getElementById('mobile-menu').classList.toggle('hidden'));</script>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galerij — VidiReo Ravenstein</title>
+    <meta name="description" content="Foto's van VidiReo Ravenstein. Bekijk ons terras, zalen, evenementen en meer.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Righteous&display=swap" rel="stylesheet">
+    <script defer src="https://analytics.code-lieshout.nl/script.js" data-website-id="ac17493c-726b-4335-89a7-b11991bc7275"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#4F46E5','primary-light':'#818CF8',cta:'#F97316','cta-hover':'#EA580C',bg:'#EEF2FF',dark:'#1E1B4B'},fontFamily:{display:['Righteous','sans-serif'],sans:['Poppins','sans-serif']}}}}</script>
+    <style>
+        @keyframes patternMove{0%{background-position:0 0}100%{background-position:60px 60px}}.animated-pattern{background-image:radial-gradient(circle,rgba(79,70,229,0.07) 1px,transparent 1px);background-size:30px 30px;animation:patternMove 8s linear infinite}@media(prefers-reduced-motion:reduce){.animated-pattern{animation:none}}html{scroll-behavior:smooth}
+        .lightbox{display:none;position:fixed;inset:0;z-index:100;background:rgba(0,0,0,0.9);align-items:center;justify-content:center;cursor:pointer}
+        .lightbox.active{display:flex}
+        .lightbox img{max-width:90vw;max-height:90vh;object-fit:contain;border-radius:12px}
+        .gallery-img{cursor:pointer;transition:transform .25s,box-shadow .25s}.gallery-img:hover{transform:scale(1.03);box-shadow:0 16px 32px rgba(0,0,0,0.15)}
+    </style>
+</head>
+<body class="font-sans text-dark bg-bg antialiased">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md shadow-sm"><div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex items-center justify-between h-16"><a href="index.html" class="font-display text-2xl text-primary cursor-pointer">VidiReo</a><div class="hidden md:flex items-center gap-6"><a href="index.html" class="text-dark font-medium hover:text-primary transition-colors duration-200 cursor-pointer">Home</a><a href="over-ons.html" class="text-dark font-medium hover:text-primary transition-colors duration-200 cursor-pointer">Over ons</a><a href="activiteiten.html" class="text-dark font-medium hover:text-primary transition-colors duration-200 cursor-pointer">Activiteiten</a><a href="zaalhuur-catering.html" class="text-dark font-medium hover:text-primary transition-colors duration-200 cursor-pointer">Zaalhuur & Catering</a><a href="filmhuis.html" class="text-dark font-medium hover:text-primary transition-colors duration-200 cursor-pointer">Filmhuis</a><a href="galerij.html" class="text-primary font-medium cursor-pointer">Galerij</a><a href="contact.html" class="bg-cta hover:bg-cta-hover text-white px-5 py-2.5 rounded-lg font-semibold transition-colors duration-200 cursor-pointer">Contact</a></div><button id="menu-toggle" class="md:hidden p-2 min-h-[44px] min-w-[44px] flex items-center justify-center cursor-pointer" aria-label="Menu"><svg class="w-7 h-7 text-dark" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg></button></div><div id="mobile-menu" class="hidden md:hidden bg-white border-t"><div class="px-4 py-4 flex flex-col gap-3"><a href="index.html" class="py-2 text-dark font-medium cursor-pointer">Home</a><a href="over-ons.html" class="py-2 text-dark font-medium cursor-pointer">Over ons</a><a href="activiteiten.html" class="py-2 text-dark font-medium cursor-pointer">Activiteiten</a><a href="zaalhuur-catering.html" class="py-2 text-dark font-medium cursor-pointer">Zaalhuur & Catering</a><a href="filmhuis.html" class="py-2 text-dark font-medium cursor-pointer">Filmhuis</a><a href="galerij.html" class="py-2 text-primary font-medium cursor-pointer">Galerij</a><a href="contact.html" class="bg-cta text-white px-5 py-2.5 rounded-lg font-semibold text-center cursor-pointer">Contact</a></div></div></nav>
+
+    <section class="pt-28 pb-16 md:pt-36 md:pb-24 animated-pattern">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <h1 class="font-display text-4xl md:text-6xl text-dark mb-6">Galerij</h1>
+            <p class="text-dark/70 text-lg max-w-3xl">Een kijkje bij VidiReo — ons terras, de zalen, evenementen en meer. Klik op een foto om te vergroten.</p>
+        </div>
+    </section>
+
+    <section class="pb-20 bg-bg">
+        <div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8">
+            <!-- Locatie -->
+            <h2 class="font-display text-2xl text-dark mb-6">VidiReo & Omgeving</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-16">
+                <img src="images/buiten-nieuw.jpg" alt="Terras aan het water" class="gallery-img rounded-2xl w-full h-48 object-cover shadow-md" loading="lazy">
+                <img src="images/google/google_place_1.jpg" alt="Kleurrijk terras" class="gallery-img rounded-2xl w-full h-48 object-cover shadow-md" loading="lazy">
+                <img src="images/google/google_place_2.jpg" alt="Groen dorpsgezicht" class="gallery-img rounded-2xl w-full h-48 object-cover shadow-md" loading="lazy">
+                <img src="images/google/google_place_3.jpg" alt="Biertjes op terras" class="gallery-img rounded-2xl w-full h-48 object-cover shadow-md" loading="lazy">
+                <img src="images/google/google_place_4.jpg" alt="Bar interieur" class="gallery-img rounded-2xl w-full h-48 object-cover shadow-md" loading="lazy">
+                <img src="images/google/google_place_5.jpg" alt="Expositie" class="gallery-img rounded-2xl w-full h-48 object-cover shadow-md" loading="lazy">
+                <img src="images/img-0832.jpeg" alt="Cappuccino" class="gallery-img rounded-2xl w-full h-48 object-cover shadow-md" loading="lazy">
+                <img src="images/img-7445.jpeg" alt="Gedekte tafel" class="gallery-img rounded-2xl w-full h-48 object-cover shadow-md" loading="lazy">
+            </div>
+
+            <!-- Evenementen -->
+            <h2 class="font-display text-2xl text-dark mb-6">Evenementen & Activiteiten</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mb-16">
+                <img src="images/img-1165.jpeg" alt="Groepslunch" class="gallery-img rounded-2xl w-full h-48 object-cover shadow-md" loading="lazy">
+                <img src="images/img-0964.webp" alt="Carnavalsoptreden" class="gallery-img rounded-2xl w-full h-48 object-cover shadow-md" loading="lazy">
+                <img src="images/img-7616.jpeg" alt="Optreden podium" class="gallery-img rounded-2xl w-full h-48 object-cover shadow-md" loading="lazy">
+                <img src="images/img-0997.jpeg" alt="Bingomiddag" class="gallery-img rounded-2xl w-full h-48 object-cover shadow-md" loading="lazy">
+            </div>
+
+            <!-- Posters -->
+            <h2 class="font-display text-2xl text-dark mb-6">Evenementposters</h2>
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <img src="images/img-1274.png" alt="Keienschijtersbal" class="gallery-img rounded-2xl w-full h-64 object-cover shadow-md" loading="lazy">
+                <img src="images/img-1317.jpeg" alt="Raovenbal 50+" class="gallery-img rounded-2xl w-full h-64 object-cover shadow-md" loading="lazy">
+                <img src="images/img-0639.jpeg" alt="Jeugdpronkzitting" class="gallery-img rounded-2xl w-full h-64 object-cover shadow-md" loading="lazy">
+                <img src="images/carnaval-2022.jpg" alt="Carnaval 2022 programma" class="gallery-img rounded-2xl w-full h-64 object-cover shadow-md" loading="lazy">
+                <img src="images/img-c51b.jpeg" alt="Prins Onthulling" class="gallery-img rounded-2xl w-full h-64 object-cover shadow-md" loading="lazy">
+                <img src="images/img-1216.jpeg" alt="De Ravenna's" class="gallery-img rounded-2xl w-full h-64 object-cover shadow-md" loading="lazy">
+                <img src="images/img-1198.jpeg" alt="The Violin Teacher filmhuis" class="gallery-img rounded-2xl w-full h-64 object-cover shadow-md" loading="lazy">
+                <img src="images/img-1200.jpeg" alt="Repair Café logo" class="gallery-img rounded-2xl w-full h-64 object-cover shadow-md" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-label="Foto vergroten">
+        <button class="absolute top-4 right-4 text-white/80 hover:text-white min-h-[44px] min-w-[44px] flex items-center justify-center cursor-pointer" aria-label="Sluiten">
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+        <img id="lightbox-img" src="" alt="">
+    </div>
+
+    <footer class="bg-dark text-white py-16"><div class="max-w-7xl mx-auto px-4 md:px-6 lg:px-8"><div class="grid grid-cols-1 md:grid-cols-4 gap-12"><div><h3 class="font-display text-2xl mb-4">VidiReo</h3><p class="text-white/60 text-sm">Het kloppend hart van Ravenstein.</p></div><div><h4 class="font-semibold mb-4">Pagina's</h4><ul class="space-y-2 text-white/60"><li><a href="over-ons.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Over ons</a></li><li><a href="zaalhuur-catering.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Zaalhuur & Catering</a></li><li><a href="activiteiten.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Activiteiten</a></li><li><a href="filmhuis.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Filmhuis</a></li></ul></div><div><h4 class="font-semibold mb-4">Contact</h4><ul class="space-y-2 text-white/60"><li>Van Kesselplaats 2</li><li>5371 AX Ravenstein</li><li><a href="tel:0623883724" class="hover:text-white transition-colors duration-200 cursor-pointer">06-23883724</a></li><li><a href="mailto:info@vidireo.nl" class="hover:text-white transition-colors duration-200 cursor-pointer">info@vidireo.nl</a></li></ul></div><div><h4 class="font-semibold mb-4">Meer</h4><ul class="space-y-2 text-white/60"><li><a href="nieuwbouw.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Nieuwbouw</a></li><li><a href="galerij.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Galerij</a></li><li><a href="contact.html" class="hover:text-white transition-colors duration-200 cursor-pointer">Contact</a></li></ul></div></div><div class="border-t border-white/10 mt-12 pt-8 text-center text-white/40 text-sm"><p>&copy; 2026 VidiReo — Ravenstein. Gebouwd door <a href="https://www.code-lieshout.nl" class="hover:text-white transition-colors duration-200 cursor-pointer underline">Code Lieshout</a></p></div></div></footer>
+
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click',()=>document.getElementById('mobile-menu').classList.toggle('hidden'));
+        // Lightbox
+        const lb = document.getElementById('lightbox');
+        const lbImg = document.getElementById('lightbox-img');
+        document.querySelectorAll('.gallery-img').forEach(img => {
+            img.addEventListener('click', () => { lbImg.src = img.src; lbImg.alt = img.alt; lb.classList.add('active'); });
+        });
+        lb.addEventListener('click', () => lb.classList.remove('active'));
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') lb.classList.remove('active'); });
+    </script>
+</body>
+</html>
